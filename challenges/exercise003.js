@@ -1,11 +1,17 @@
 function getSquares(nums) {
   if (nums === undefined) throw new Error("nums is required");
-  // Your code here!
+  return nums.map(num => num * num)
 }
 
 function camelCaseWords(words) {
   if (words === undefined) throw new Error("words is required");
-  // Your code here!
+  let camelCased = words[0].toLowerCase()
+  
+  words.slice(1).forEach(word => {    
+    let capital = word.slice(0,1).toUpperCase()
+    camelCased += capital + word.slice(1)
+  });
+  return camelCased
 }
 
 function getTotalSubjects(people) {
