@@ -18,7 +18,13 @@ function getBusNumbers(people) {
 
 function countSheep(arr) {
   if (arr === undefined) throw new Error("arr is required");
-  // Your code here!
+  let count = 0;
+  arr.forEach(animal => {
+    if (animal === 'sheep') {
+      count += 1
+    }
+  });
+  return count
 }
 
 function hasMPostCode(person) {
