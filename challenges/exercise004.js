@@ -1,6 +1,13 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  // for loop solution
+  let solutionArray = []
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] < 1) {
+      solutionArray.push(nums[i])
+    }
+  }
+  return solutionArray
 }
 
 function findNamesBeginningWith(names, char) {
