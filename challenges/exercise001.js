@@ -7,9 +7,7 @@ function capitalize(word) {
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
-  let firstInitial = firstName.slice(0,1)
-  let secondInitial = lastName.slice(0,1)
-  return `${firstInitial}.${secondInitial}`
+  return `${firstName.slice(0,1)}.${lastName.slice(0,1)}`
 }
 
 function addVAT(originalPrice, vatRate) {
