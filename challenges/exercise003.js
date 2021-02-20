@@ -8,7 +8,7 @@ function camelCaseWords(words) {
   let camelCased = words[0].toLowerCase()
   
   words.slice(1).forEach(word => {    
-    let capital = word.slice(0,1).toUpperCase()
+    const capital = word.slice(0,1).toUpperCase()
     camelCased += capital + word.slice(1)
   });
   return camelCased
