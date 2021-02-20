@@ -1,9 +1,10 @@
 const findNextNumber = (nums, n) => {
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
-  const targetIndex = nums.indexOf(n);
-  if (targetIndex > 0 && (nums[targetIndex + 1])) {
-    return nums[targetIndex + 1]
+
+  const nextInt = index => nums[index + 1]
+  if (nums.indexOf(n) >= 0 && nextInt(nums.indexOf(n))) {
+    return nextInt(nums.indexOf(n))
   }
   else {
     return null
