@@ -19,7 +19,13 @@ describe("sumMultiples", () => {
 
 describe("isValidDNA", () => {
     test("returns true if string contains characters C, G, T or A only.", () => {
-        expect(isValidDNA('Is not valid DNA')).toBe(false);
         expect(isValidDNA('CTGAGTCGGA')).toBe(true);
     });
+    test("returns false if string contains other characters", () => {
+        expect(isValidDNA('Is not valid DNA')).toBe(false);
+    });
+    test("is case sensitive", () => {
+        expect(isValidDNA("CGTaGTAC")).toBe(false);
+        expect(isValidDNA("CGTAGTAC")).toBe(true);
+    })
 })
