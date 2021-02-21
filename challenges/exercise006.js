@@ -6,6 +6,7 @@
  */
 const sumMultiples = arr => {
   if (arr === undefined) throw new Error("arr is required");
+  return "RED"
 };
 
 /**
