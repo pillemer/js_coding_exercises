@@ -13,6 +13,6 @@ describe("sumMultiples", () => {
         expect(sumMultiples([1, 2, 3, 4, 5, 6])).toBe(14);
     });
     test("returns 0 if no multiples of 3 or 5", () => {
-        expect(sumMultiples([1,2,4,7,21])).toBe(0);
+        expect(sumMultiples([1,2,4,7,2])).toBe(0);
     });
 });
