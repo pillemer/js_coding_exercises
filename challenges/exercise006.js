@@ -113,7 +113,7 @@ const areWeCovered = (staff, day) => {
   if (staff === undefined) throw new Error("staff is required");
   if (day === undefined) throw new Error("day is required");
   const week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-  return (week.includes(day))
+  if (!week.includes(day.toLowerCase())) throw new Error("day is incorrect");
 };
 
 module.exports = {
