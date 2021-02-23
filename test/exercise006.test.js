@@ -92,6 +92,9 @@ describe("areWeCovered", () => {
         expect(areWeCovered('', 'saturday')).toBe(true);
         expect(areWeCovered('', 'sunday')).toBe(true);
     })
+    test("returns false if days isn't valid day of the week", () => {
+        expect(areWeCovered('', 'firday')).toBe(false);
+    })
 })
 /*
  * This function takes an array of staff objects in the format:
