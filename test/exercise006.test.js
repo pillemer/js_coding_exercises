@@ -29,3 +29,10 @@ describe("isValidDNA", () => {
         expect(isValidDNA("CGTAGTAC")).toBe(true);
     })
 })
+
+describe("getComplementaryDNA", () => {
+    test("receives a valid DNA string", () => {
+        expect(() => { getComplementaryDNA("invalid DNA string"); }).toThrow();
+        expect(() => { getComplementaryDNA("invalid DNA string"); }).toThrowError("DNA string must be valid");
+    });
+})
