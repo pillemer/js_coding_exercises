@@ -83,10 +83,21 @@ describe("createMatrix", () => {
 })
 
 describe("areWeCovered", () => {
+    const staff = [
+        { name: "Elizabeth", rota: [] },
+        { name: "Philip", rota: [] },
+        { name: "Charles", rota: [] },
+        { name: "Anne", rota: [] },
+        { name: "Andrew", rota: [] },
+        { name: "Edward", rota: [] },
+    ]
     test("throws error if day is not a valid day of the week", () => {
         expect(() => { areWeCovered('', 'firday'); }).toThrow();
         expect(() => { areWeCovered('', 'firday'); }).toThrowError("day is incorrect");
     });
+    test("returns false if less than three staff are working on a given day", () => {
+        expect(areWeCovered(staff, 'Monday')).toBe(false);
+    })
 })
 /*
  * This function takes an array of staff objects in the format:
