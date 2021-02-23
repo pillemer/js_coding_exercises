@@ -69,5 +69,7 @@ describe("isItPrime", () => {
 describe("createMatrix", () => {
     test("returns an array with n items", () => {
         expect(createMatrix(1, 'foo').length).toBe(1);
+        expect(createMatrix(2, 'bar').length).toBe(2);
+        expect(createMatrix(5, 'spam').length).toBe(3);
     })
 })
