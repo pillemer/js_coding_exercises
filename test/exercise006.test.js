@@ -83,24 +83,10 @@ describe("createMatrix", () => {
 })
 
 describe("areWeCovered", () => {
-    test("returns true if day is valid day of the week", () => {
-        expect(areWeCovered('', 'monday')).toBe(true);
-        expect(areWeCovered('', 'tuesday')).toBe(true);
-        expect(areWeCovered('', 'wednesday')).toBe(true);
-        expect(areWeCovered('', 'thursday')).toBe(true);
-        expect(areWeCovered('', 'friday')).toBe(true);
-        expect(areWeCovered('', 'saturday')).toBe(true);
-        expect(areWeCovered('', 'sunday')).toBe(true);
-    })
-    test("returns false if days isn't valid day of the week", () => {
-        expect(areWeCovered('', 'firday')).toBe(false);
-    })
-    test("is not case sensitive", () => {
-        expect(areWeCovered('', 'Monday')).toBe(true);
-        expect(areWeCovered('', 'TUESDAY')).toBe(true);
-        expect(areWeCovered('', 'WeDnEsDaY')).toBe(true);
-
-    })
+    test("throws error if day is not a valid day of the week", () => {
+        expect(() => { areWeCovered('', 'firday'); }).toThrow();
+        expect(() => { areWeCovered('', 'firday'); }).toThrowError("day is incorrect");
+    });
 })
 /*
  * This function takes an array of staff objects in the format:
