@@ -43,7 +43,13 @@ const isValidDNA = str => {
 const getComplementaryDNA = str => {
   if (str === undefined) throw new Error("str is required");
   if (!isValidDNA(str)) throw new Error("DNA string must be valid");
-  
+  const dictionary = {
+    "A": "T",
+    "T": "A",
+    "G": "C",
+    "C": "G",
+  };
+  return dictionary[str]
 };
 
 /**
