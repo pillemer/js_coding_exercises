@@ -65,3 +65,9 @@ describe("isItPrime", () => {
         expect(isItPrime(358)).toBe(false);
     })
 })
+
+describe("createMatrix", () => {
+    test("returns an array with n items", () => {
+        expect(createMatrix(1, 'foo').length()).toBe(1);
+    })
+})
