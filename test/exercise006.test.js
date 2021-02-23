@@ -73,7 +73,11 @@ describe("createMatrix", () => {
         expect(createMatrix(5, 'spam').length).toBe(5);
     })
     test("returns an array of n arrays on length n", () => {
-        expect(createMatrix(2,"foo")).toBe([["foo", 'foo'],
-                                            ["foo", 'foo']])
+        expect(createMatrix(2,"foo")).toStrictEqual([["foo", 'foo'],
+                                                    ["foo", 'foo']])
+        expect(createMatrix(4,"bar")).toStrictEqual([["bar", "bar","bar","bar"],
+                                                    ["bar", "bar","bar","bar"],
+                                                    ["bar", "bar","bar","bar"],
+                                                    ["bar", "bar","bar","bar"]])                                                    
     })
 })
