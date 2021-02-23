@@ -84,13 +84,13 @@ describe("createMatrix", () => {
 
 describe("areWeCovered", () => {
     test("returns true if day is valid day of the week", () => {
-        expect(areWeCovered('', 'Monday')).toBe(true);
-        expect(areWeCovered('', 'Tuesday')).toBe(true);
-        expect(areWeCovered('', 'Wednesday')).toBe(true);
-        expect(areWeCovered('', 'Thursday')).toBe(true);
-        expect(areWeCovered('', 'Friday')).toBe(true);
-        expect(areWeCovered('', 'Saturday')).toBe(true);
-        expect(areWeCovered('', 'Sunday')).toBe(true);
+        expect(areWeCovered('', 'monday')).toBe(true);
+        expect(areWeCovered('', 'tuesday')).toBe(true);
+        expect(areWeCovered('', 'wednesday')).toBe(true);
+        expect(areWeCovered('', 'thursday')).toBe(true);
+        expect(areWeCovered('', 'friday')).toBe(true);
+        expect(areWeCovered('', 'saturday')).toBe(true);
+        expect(areWeCovered('', 'sunday')).toBe(true);
     })
 })
 /*
