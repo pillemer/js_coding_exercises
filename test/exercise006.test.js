@@ -35,4 +35,10 @@ describe("getComplementaryDNA", () => {
         expect(() => { getComplementaryDNA("invalid DNA string"); }).toThrow();
         expect(() => { getComplementaryDNA("invalid DNA string"); }).toThrowError("DNA string must be valid");
     });
+    test("returns a complementary pairing", () => {
+        expect(getComplementaryDNA("A")).toBe("T");
+        expect(getComplementaryDNA("T")).toBe("A");
+        expect(getComplementaryDNA("C")).toBe("G");
+        expect(getComplementaryDNA("G")).toBe("C");
+    })
 })
