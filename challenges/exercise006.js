@@ -49,7 +49,7 @@ const getComplementaryDNA = str => {
     "G": "C",
     "C": "G",
   };
-  return dictionary[str]
+  return [...str].map(letter => dictionary[letter]).join('') 
 };
 
 /**
