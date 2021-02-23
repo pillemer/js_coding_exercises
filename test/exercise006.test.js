@@ -48,13 +48,19 @@ describe("getComplementaryDNA", () => {
 })
 
 describe("isItPrime", () => {
+    test("returns true if number is below 4", () => {
+        expect(isItPrime(0)).toBe(true);
+        expect(isItPrime(1)).toBe(true);
+        expect(isItPrime(2)).toBe(true);        
+        expect(isItPrime(3)).toBe(true);
+    })
     test("returns true if the number is prime", () => {
         expect(isItPrime(1)).toBe(true);
         expect(isItPrime(37)).toBe(true);
         expect(isItPrime(359)).toBe(true);        
     })
     test("returns false if the number is not prime", () => {
-        expect(isItPrime(6)).toBe(false);
+        expect(isItPrime(4)).toBe(false);
         expect(isItPrime(99)).toBe(false);
         expect(isItPrime(358)).toBe(false);
     })
