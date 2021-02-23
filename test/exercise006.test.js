@@ -81,3 +81,26 @@ describe("createMatrix", () => {
                                                     ["bar", "bar","bar","bar"]])                                                    
     })
 })
+
+describe("areWeCovered", () => {
+    test("returns true if day is valid day of the week", () => {
+        expect(areWeCovered('', 'Monday')).toBe(true);
+        expect(areWeCovered('', 'Tuesday')).toBe(true);
+        expect(areWeCovered('', 'Wednesday')).toBe(true);
+        expect(areWeCovered('', 'Thursday')).toBe(true);
+        expect(areWeCovered('', 'Friday')).toBe(true);
+        expect(areWeCovered('', 'Saturday')).toBe(true);
+        expect(areWeCovered('', 'Sunday')).toBe(true);
+    })
+})
+/*
+ * This function takes an array of staff objects in the format:
+ * [
+ *  { name: "Sally", rota: ["Monday", "Tuesday", "Friday"] },
+ *  { name: "Pedro", rota: ["Saturday", "Sunday", "Tuesday", "Wednesday"] },
+ *  ...etc
+ * ]
+ * and a day of the week. For the café to run successfully, at least 3 staff members 
+ * are required per day. The function should return true/false depending on whether 
+ * there are enough staff scheduled for the given day.
+ */
