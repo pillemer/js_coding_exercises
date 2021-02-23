@@ -95,6 +95,12 @@ describe("areWeCovered", () => {
     test("returns false if days isn't valid day of the week", () => {
         expect(areWeCovered('', 'firday')).toBe(false);
     })
+    test("is not case sensitive", () => {
+        expect(areWeCovered('', 'Monday')).toBe(true);
+        expect(areWeCovered('', 'TUESDAY')).toBe(true);
+        expect(areWeCovered('', 'WeDnEsDaY')).toBe(true);
+
+    })
 })
 /*
  * This function takes an array of staff objects in the format:
