@@ -46,3 +46,12 @@ describe("getComplementaryDNA", () => {
         expect(getComplementaryDNA("GTCA")).toBe("CAGT");
     })
 })
+
+describe("isItPrime", () => {
+    test("returns true if the number is prime", () => {
+        expect(isItPrime(1)).toBe(true);
+    })
+    test("returns false if the number is not prime", () => {
+        expect(isItPrime(6)).toBe(false);
+    })
+})
