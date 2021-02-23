@@ -88,6 +88,9 @@ const createMatrix = (n, fill) => {
   let matrix = [];
   for (let i = 0; i < n; i++) {
     matrix[i] = new Array(n);
+    for (let j = 0; j < n; j++) {
+      matrix[i][j] = fill;
+    }
   }
   return matrix
 };
