@@ -28,7 +28,7 @@ describe("createRange", () => {
     });
     test("returns correct array with negative step", () => {
         expect(createRange(10, 6, -1)).toStrictEqual([10, 9, 8, 7, 6]);
-        expect(createRange(99, 27, -3)).toStrictEqual([10, 9, 8, 7, 6]);
+        expect(createRange(99, 69, -3)).toStrictEqual([99, 96, 93, 90, 87, 84, 81, 78, 75, 72, 69]);
     });
 
 });
