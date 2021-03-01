@@ -84,7 +84,7 @@ describe("createMatrix", () => {
 
 describe("areWeCovered", () => {
     const staff = [
-        { name: "Elizabeth", rota: [] },
+        { name: "Elizabeth", rota: ['Monday'] },
         { name: "Philip", rota: [] },
         { name: "Charles", rota: [] },
         { name: "Anne", rota: [] },
