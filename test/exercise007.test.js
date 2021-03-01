@@ -17,7 +17,7 @@ describe("sumDigits", () => {
 
 describe("createRange", () => {
     test("returns array of numbers", () => {
-        // expect(createRange(0, 6, 1)).toBe([0, 1, 2, 3, 4, 5, 6]);
-        expect(createRange(0, 6, 2)).toBe([0, 2, 4, 6]);
+        expect(createRange(0, 6, 1)).toStrictEqual([0, 1, 2, 3, 4, 5, 6]);
+        expect(createRange(0, 6, 2)).toStrictEqual([0, 2, 4, 6]);
     });
 });
