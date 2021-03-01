@@ -84,9 +84,9 @@ describe("createMatrix", () => {
 
 describe("areWeCovered", () => {
     const staff = [
-        { name: "Elizabeth", rota: ['Monday'] },
-        { name: "Philip", rota: [] },
-        { name: "Charles", rota: [] },
+        { name: "Elizabeth", rota: ["Monday", "Tuesday", "Friday"] },
+        { name: "Philip", rota: ["Monday", "Tuesday", "Friday"] },
+        { name: "Charles", rota: ["Monday", "Tuesday", "Friday"] },
         { name: "Anne", rota: [] },
         { name: "Andrew", rota: [] },
         { name: "Edward", rota: [] },
@@ -96,7 +96,15 @@ describe("areWeCovered", () => {
         expect(() => { areWeCovered('', 'firday'); }).toThrowError("day is incorrect");
     });
     test("returns false if less than three staff are working on a given day", () => {
-        expect(areWeCovered(staff, 'Monday')).toBe(false);
+        expect(areWeCovered(staff, 'Wednesday')).toBe(false);
+        expect(areWeCovered(staff, 'Thursday')).toBe(false);
+        expect(areWeCovered(staff, 'Saturday')).toBe(false);
+        expect(areWeCovered(staff, 'Sunday')).toBe(false);
+    })
+    test("returns true if three or more staff are working on a given day", () => {
+        expect(areWeCovered(staff, 'Monday')).toBe(true);
+        expect(areWeCovered(staff, 'Tuesday')).toBe(true);
+        expect(areWeCovered(staff, 'Friday')).toBe(true);
     })
 })
 /*
