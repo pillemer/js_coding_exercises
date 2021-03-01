@@ -4,6 +4,7 @@
  */
 const sumDigits = n => {
   if (n === undefined) throw new Error("n is required");
+  return Array.from(String(n), Number).reduce((sum, value) => +sum + value, 0);
 };
 
 /**
