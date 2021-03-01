@@ -86,10 +86,10 @@ describe("areWeCovered", () => {
     const staff = [
         { name: "Elizabeth", rota: ["Monday", "Tuesday", "Friday"] },
         { name: "Philip", rota: ["Monday", "Tuesday", "Friday"] },
-        { name: "Charles", rota: ["Monday", "Tuesday", "Friday"] },
-        { name: "Anne", rota: [] },
-        { name: "Andrew", rota: [] },
-        { name: "Edward", rota: [] },
+        { name: "Charles", rota: ["Monday", "Tuesday", "Thursday"] },
+        { name: "Anne", rota: ["Sunday", "Friday", "Wednesday"] },
+        { name: "Andrew", rota: ["Wednesday", "Friday"] },
+        { name: "Edward", rota: ["Saturday"] },
     ]
     test("throws error if day is not a valid day of the week", () => {
         expect(() => { areWeCovered('', 'firday'); }).toThrow();
