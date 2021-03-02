@@ -58,4 +58,7 @@ describe("getScreentimeAlertList", () => {
     test("will return empty array if given date is not in the array", () => {
         expect(getScreentimeAlertList(ScreenTimeData, "2019-05-10")).toStrictEqual([]);
     });
+    test("will return array with correct username if they have more than 100 minutes of screentime at given date", () => {
+        expect(getScreentimeAlertList(ScreenTimeData, "2019-05-04")).toStrictEqual(["beth_1234"]);
+    });
 })
