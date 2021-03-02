@@ -56,6 +56,6 @@ describe("getScreentimeAlertList", () => {
         },
     ]
     test("will return empty array if given date is not in the array", () => {
-        expect(getScreentimeAlertList(ScreenTimeData, "2019-05-10")).toBe([]);
+        expect(getScreentimeAlertList(ScreenTimeData, "2019-05-10")).toStrictEqual([]);
     });
 })
