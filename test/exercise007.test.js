@@ -53,6 +53,15 @@ describe("getScreentimeAlertList", () => {
                 { date: "2019-06-13", usage: { mapMyRun: 0, whatsApp: 0, facebook: 0, safari: 16} },
                 { date: "2019-06-14", usage: { mapMyRun: 0, whatsApp: 0, facebook: 0, safari: 31} },
             ]
+        },        
+        {
+            username: "Johnny-5",
+            name: "James Bond",
+            screenTime: [
+                { date: "2019-05-02", usage: { mapMyRun: 23, whatsApp: 46, facebook: 1, safari: 90} },
+                { date: "2019-04-23", usage: { mapMyRun: 0, whatsApp: 0, facebook: 0, safari: 16} },
+                { date: "2019-08-30", usage: { mapMyRun: 0, whatsApp: 0, facebook: 0, safari: 31} },
+            ]
         },
     ]
     test("will return empty array if given date is not in the array", () => {
@@ -63,5 +72,8 @@ describe("getScreentimeAlertList", () => {
     });
     test("will return empty array if no user has more than 100 minutes of screentime at given date", () => {
         expect(getScreentimeAlertList(ScreenTimeData, "2019-06-11")).toStrictEqual([]);
+    });
+    test("will all names if more than one user has more than 100 minutes of screentime at given date", () => {
+        expect(getScreentimeAlertList(ScreenTimeData, "2019-05-02")).toStrictEqual(["beth_1234", "Johnny-5"]);
     });
 })
